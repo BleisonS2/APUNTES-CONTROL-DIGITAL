@@ -1,6 +1,6 @@
-**Danilo Stiben Rodriguez Malagon Cod 119238**
-**Bleison Bley Ruiz Gutierrez Cod 112589**
-**Sergio Fabian Guzman Pulido Cod 119753**
+- **Danilo Stiben Rodriguez Malagon Cod 119238**
+- **Bleison Bley Ruiz Gutierrez Cod 112589**
+- **Sergio Fabian Guzman Pulido Cod 119753**
 
 # APUNTES CONTROL DIGITAL
 ## SEÑALES DIGITALES VS SEALES ANALOGAS
