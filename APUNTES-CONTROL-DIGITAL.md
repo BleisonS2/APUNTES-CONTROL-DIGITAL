@@ -185,4 +185,105 @@ $$C(z)=T((\frac{5}{9})(\frac{z}{z-e^{-t}})+((\frac{40}{9})(\frac{z}{z-e^{-10T}})
 - Obtenemos
 
 $$C(z)=0.5(\frac{405z^2-216.27z}{81z^2-49.08z+0.29})$$
-  
+
+- luego
+
+$$(U(z))(81z^{2}-49.08z+0.29) = (E(z))(200.25z^{2}-108.13z)$$
+
+- Tranzformada inversa Z
+
+$$(81U)(k+2)-(49.08U)(k+1)+(0.29U)(k)= (200,25E)(k+2)-108.13E(k+1)$$
+
+- Movemos las muestras para dejar la ecuacion en atrasos ya que se encuentra en forma de adelantos (k+n))
+
+$$(81U)(k)-(49.08U)(k-1)+(0.29U)(k-2)= (200,25E)(k)-108.13E(k-1)$$
+
+## TRANSFORMADA Z DE UNA FUNSION PASO
+
+$$Z[E(t)]= \frac{z}{z-1}$$
+
+- se pueden igualar las transfomadas inversas
+
+$$Z^{-1} [C(z)\frac{z}{z-1}]= L^{-1}[C(s)\frac{1}{s}]$$
+
+- se despeja la transformada z
+
+$$C(z)=\frac{z-1}{z}z[L^{-1}[C(s)\frac{1}{s}]]$$
+
+- se divide por s
+
+$$\frac{C(s)}{s}=\frac{2(5-2)}{5(5+1)(5+3)}$$
+
+- fracciones parciales
+
+$$\frac{C(s)}{s}=\frac{-\frac{4}{3}}{5}-\frac{3}{5+1}-\frac{\frac{5}{3}}{5+3})$$
+
+- Obtenemos
+
+$$C(z)=\frac{z-1}{z}(\frac{-\frac{3}{4}z}{z-1}-\frac{3z}{z-e^{-t}}-\frac{5z}{3(z-e^{-3t}})$$
+
+## METODO EULER ADELANTE
+
+$$\frac{d}{dKT}(KT)=\frac{x(k+1)-x(k)}{T}$$
+
+- Luego de Aplicar transfomada z obtenemos
+
+$$S=\frac{z-1}{T}$$
+
+## METODO EULER ATRAS
+
+$$\frac{d}{dKT}(KT)=X\frac{x(k)-x(k-1)}{T}$$
+
+- Luego de Aplicar transfomada z obtenemos
+
+$$S=\frac{z-1}{TZ}$$
+
+## METODO TRAPEZOIAL
+
+- La equivalencia es
+
+$$S=(\frac{2}{T})(\frac{z-1}{z+1}$$
+
+- o tambien
+
+$$Z=\frac{1+\frac{Ts}{2}}{1-\frac{Ts}{2}}$$
+
+## ESTABILIDAD ABSOLUTA
+
+Un sistema es considerado estable cuando, ante una entrada limitada, produce una salida limitada.
+
+![Sitema estable](https://github.com/user-attachments/assets/5e17785f-4079-4c4d-b5bd-790d401fa962)
+
+Figura 9. Ejemplo sistema Estable
+
+## CLASIFICACION DE LA ESTABILIDAD
+
+1. *Estabilidad Absoluta*: Todos los polos del sistema están ubicados en el semiplano izquierdo (parte real negativa) del plano complejo \(s\).
+2. *Marginalmente Estable*: Algunos polos están en el eje imaginario, pero no en el semiplano derecho.
+3. *Inestable*: Cualquier polo en el semiplano derecho (parte real positiva) del plano complejo \(s\).
+
+
+![estabilidad_ejemplos](https://github.com/user-attachments/assets/e3746461-ff1e-4a9a-8a9d-6d4feae569b9)
+
+Figura 10. Ejemplos de estabilidad de sistemas. 
+
+Los polos del sistema en el espacio de Laplace tienen una equivalencia en la Transformada Z, lo que permite analizar la estabilidad en sistemas discretos. Esta equivalencia se expresa como:
+
+ $$ Z = e^{Ts} $$
+
+Donde:
+
+- \( T \) es el período de muestreo.
+- \( s = \sigma + j\omega \) es el polo en el plano \(s\), con \(\sigma\) representando la parte real y \(j\omega\) la parte imaginaria.
+
+**Ejemplos:**
+
+*a)* 
+
+$$ s = σ + j w > Z=e^{Ts} $$
+
+- decimos que
+
+$$ σ > 0 $$ 
+
+- es inestable
