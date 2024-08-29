@@ -149,4 +149,40 @@ La transformada de Laplace de una función $\( f(t) \)$ se denota como $\( \math
 > se usa respuesta al impulso de c(s) para obtener C(z)
 *a transdormada de Laplace del impulso*
 $$(e(t)=\(\sigma\)t) =  (e(s)=1)$$
+
+si C(s) es estrictamente propia y se asume a un tiempo de muestreo T lo suficientemente pequeño
+
+$$C(z)=z(L^{-1}(c(s))t=kt)$$
+
+- Teniendo en cuenta el tiempo de muestreo 
+
+$$C(z)=Tz(l^{-1}(C(s))t=kt)$$
+
+- Dando valores
+
+$$C(s)=\frac{((5cs)+2)}{((5+1)(5+10))}$$
+
+- fracciones parciales
+
+$$C(s)=(\frac{5/9}{5+1})+(\frac{40/9}{5+10})$$
+
+- inversa de Laplace obtenemos la funcion en tiempo continuo
+
+$$\mathcal{L^{-1}}\{C(s)\}  = (\frac{5}{9} e^{-t}) + (\frac{40}{9} e^{-10t})$$
+
+- Reemplazamos t->KT
+
+$$\mathcal{L^{-1}}\{C(s)\} t =KT= (\frac{5}{9} e^{-KT}) + (\frac{40}{9} e^{-10KT})$$
+
+- Por lo tanto
+
+$$C(z)=Tz((\frac{5}{9} e^{-KT})+(\frac{40}{9} e^{-10KT}))$$
+
+- De las tablas se obtiene
+
+$$C(z)=T((\frac{5}{9})(\frac{z}{z-e^{-t}})+((\frac{40}{9})(\frac{z}{z-e^{-10T}}))$$
+
+- Obtenemos
+
+$$C(z)=0.5(\frac{405z^2-216.27z}{81z^2-49.08z+0.29})$$
   
