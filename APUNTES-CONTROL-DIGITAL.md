@@ -1,4 +1,8 @@
-# APUNTES-CONTROL-DIGITAL
+**Danilo Stiben Rodriguez Malagon Cod 119238**
+**Bleison Bley Ruiz Gutierrez Cod 112589**
+**Sergio Fabian Guzman Pulido Cod 119753**
+
+# APUNTES CONTROL DIGITAL
 ## SEÑALES DIGITALES VS SEALES ANALOGAS
 
 ![images](https://github.com/user-attachments/assets/a53a33e2-0e26-4453-ba04-fa3709296e32)
