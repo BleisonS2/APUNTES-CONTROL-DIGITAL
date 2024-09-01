@@ -291,3 +291,68 @@ $$ s = σ + j w > Z=e^{Ts} $$
 $$ σ > 0 $$ 
 
 - es inestable
+- 
+## Métodos de Euler
+
+Los métodos de Euler son técnicas numéricas básicas utilizadas para resolver ecuaciones diferenciales ordinarias (EDOs). Son métodos de integración explícitos (Euler hacia adelante) e implícitos (Euler hacia atrás) que aproximan soluciones de EDOs en intervalos discretos.
+
+## 1. Método de Euler Hacia Adelante
+
+> *Definición:* El método de Euler hacia adelante es un método explícito que utiliza la pendiente en el punto actual para estimar el valor de la función en el siguiente paso.
+
+### 1.1 Fórmula
+
+$$y_{n+1} = y_n + h \cdot f(t_n, y_n)$$
+
+donde:
+- \( y_{n+1} \) es el valor aproximado en el siguiente paso.
+- \( y_n \) es el valor actual de la función.
+- \( h \) es el tamaño del paso.
+- \( f(t_n, y_n) \) es la derivada de \( y \) en el tiempo \( t_n \).
+
+### 1.2 Características
+
+- *Simplicidad:* Fácil de implementar y computacionalmente eficiente.
+- *Estabilidad:* Es condicionalmente estable, lo que significa que requiere un tamaño de paso pequeño para mantener la precisión.
+- *Aplicación:* Adecuado para problemas donde se requiere una solución rápida y aproximada.
+
+## 2. Método de Euler Hacia Atrás
+
+> *Definición:* El método de Euler hacia atrás es un método implícito que utiliza la pendiente en el punto futuro para estimar el valor de la función, lo que suele requerir la solución de una ecuación no lineal en cada paso.
+
+### 2.1 Fórmula
+
+$$y_{n+1} = y_n + h \cdot f(t_{n+1}, y_{n+1})$$
+
+donde:
+- \( y_{n+1} \) debe ser calculado resolviendo la ecuación, ya que aparece en ambos lados de la misma.
+
+### 2.2 Características
+
+- *Estabilidad:* Es incondicionalmente estable, lo que permite el uso de pasos más grandes sin perder estabilidad.
+- *Complejidad:* Más complicado de implementar debido a la necesidad de resolver una ecuación en cada paso.
+- *Aplicación:* Adecuado para problemas donde la estabilidad es crítica, como en la simulación de sistemas rígidos.
+
+## Test de Jury
+
+El Test de Jury es un proceso algebraico utilizado en sistemas de control para determinar la estabilidad de un sistema discreto. Este método es una extensión del criterio de Routh-Hurwitz aplicado a sistemas de tiempo continuo, adaptado para sistemas de tiempo discreto. Funciona para analizar la estabilidad de polinomios.
+
+## 1. Procedimiento del Test de Jury
+
+![Captura de pantalla 2024-09-01 110105](https://github.com/user-attachments/assets/7f635fc7-c181-4dcf-bdec-117af5e671fd)
+
+1. *Formar la Tabla de Jury:*
+   - Se construye una tabla utilizando los coeficientes del polinomio característico, organizados en filas con un proceso iterativo.
+  
+ ![tabla-criterio-de-estabilidad-de-jury](https://github.com/user-attachments/assets/c02d1278-01fb-40ea-8418-2973cea8ccf5)
+  - 
+  
+2. *Condiciones de Estabilidad:*
+   - El sistema es estable si se cumplen las condiciones de signo y magnitud para cada fila generada en la tabla.
+
+3. *Interpretación de Resultados:*
+   - Si todas las condiciones de estabilidad son satisfechas, entonces todas las raíces del polinomio característico están dentro del círculo unitario y, por lo tanto, el sistema es estable.
+
+## 2. Conclusión
+
+> El Test de Jury es una herramienta eficaz para evaluar la estabilidad de sistemas discretos mediante el análisis algebraico de su polinomio característico. Es especialmente útil en el diseño de controladores digitales y en la verificación de la estabilidad de sistemas en tiempo discreto.
