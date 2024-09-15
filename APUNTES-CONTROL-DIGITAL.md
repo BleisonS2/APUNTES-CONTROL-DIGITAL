@@ -356,3 +356,17 @@ El Test de Jury es un proceso algebraico utilizado en sistemas de control para d
 ## 2. Conclusión
 
 > El Test de Jury es una herramienta eficaz para evaluar la estabilidad de sistemas discretos mediante el análisis algebraico de su polinomio característico. Es especialmente útil en el diseño de controladores digitales y en la verificación de la estabilidad de sistemas en tiempo discreto.
+
+# APUNTES CONTROL DIGITAL-2do Corte
+
+##METODOS ALGEBRAICOS 
+- *Metodos que se usan para obtener de terminado comportamiento en un sistema de lazo cerrado*
+- *Su funcion principal es modificar la funcion de transferencia de acuerdo al objetivo deseado*
+- *Existen 2 metodos: por Igualación de modelo y por igualación de coeficientes*
+
+## IGUALACIÓN DE MODELO
+- La función G(z) es conocida y es de lazo abierto
+- se debe Conocer la respuesta deseada representada en una función de transferencia de lazo Cerrado Go(z)
+
+## Ecuaciones
+- $$ Go(s)= C(z)G(z)/ 1+C(z)G(z) $$
