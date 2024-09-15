@@ -61,7 +61,7 @@ Figura 5. Figura 2do Ejemplo Cuantizacion
 
 - Señal analogica: [0.3]V
 - Bits de representacion: 2 bits
-- $2^2 = 4$ posibles simbolos
+- $2^2 = 4$ posibles simbolos 
 - Rango analogico: 3-0=3V
 - Representacion: $\frac{3}{4}=0.75V$
 
@@ -369,4 +369,9 @@ El Test de Jury es un proceso algebraico utilizado en sistemas de control para d
 - se debe Conocer la respuesta deseada representada en una función de transferencia de lazo Cerrado Go(z)
 
 ## Ecuaciones
-- $$ Go(s)= C(z)G(z)/ 1+C(z)G(z) $$
+- $$Go(s)=\frac{C(z)G(z)}{1+C(z)G(z)}$$
+- $$Go(z)(1+C(z)G(z)= C(z)G(z)$$
+- $$Go(z)+ Go(z)C(z)G(z)= C(z)G(z)$$
+- $$Go(z)= C(z)G(z)-Go(z)C(z)G(z)$$
+- $$Go(z) = C(z)(G(z)- Go(z)G(z)$$
+- C(z)= \frac {Go(z)}{G(z)- Go(z)G(z)}= \frac{Go(z)}{G(z)(1- Go(z))}
